@@ -14,5 +14,5 @@ export const handler = (argv: Arguments<Options>): void => {
     const { filename } = argv
     // compile action
     process.stdout.write(filename)
-    process.exit(0)
+    // process.exit(0)
 }
