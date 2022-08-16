@@ -17,4 +17,8 @@ function $observe(fn, ...args) {
 const unobserve = (signal) => signal.unobserve()
 
 observe.$name = 'observe'
-export default observe
+
+export {
+    observe,
+    unobserve
+}

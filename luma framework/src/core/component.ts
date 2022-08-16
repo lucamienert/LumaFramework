@@ -1,5 +1,6 @@
 import { prevalidateMiddlewares } from "./middlewareValidator"
 import validateConfig from "./validateConfig"
+import { register as registerElement } from './registry'
 
 const secret: any = {
     config: Symbol('component config')

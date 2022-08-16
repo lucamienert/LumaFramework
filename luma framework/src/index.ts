@@ -1,4 +1,4 @@
-var luma
+var luma: any
 
 if(typeof Proxy === undefined)
     luma = { supported: false }
