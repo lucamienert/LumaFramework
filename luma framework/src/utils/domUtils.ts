@@ -138,7 +138,7 @@ const findAncestorProp = (node, prop) => {
     return node ? node[prop] : undefined
 }
 
-const findAncestor = (node: any, condition) => {
+const findAncestor = (node: any, condition: any) => {
     if (!(node instanceof Node))
         throw new TypeError('first argument must be a node')
 

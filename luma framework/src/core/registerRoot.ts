@@ -1,4 +1,6 @@
 import {observe, unobserve} from "../middlewares/observe"
+import cleanupDom from "./cleanDOM"
+import setupDom from "./setupDOM"
 
 let documentObserved = false
 
@@ -17,9 +19,7 @@ function registerRootV1(name, config) {
     const parentProto = getParentProto(config)
     const parentConstructor = getParentConstructor(config)
 
-    function RootElement(): CustomElementConstructor {
-        return Reflect.construct(parentConstructor, [], RootElement)
-    }
+    const RootElement = Reflect.construct(parentConstructor, [], () => RootElement)
 
     const proto = RootElement.prototype
     proto.connectedCallback = attachedCallback

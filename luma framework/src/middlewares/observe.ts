@@ -1,6 +1,6 @@
-import observer from '../utils/observerUtils'
+import observer from '../utils/observer'
 
-function observe (node, state) {
+function observe (node, state?) {
     node.$contextState = observer.observable(node.$contextState)
     node.$state = observer.observable(node.$state)
   
