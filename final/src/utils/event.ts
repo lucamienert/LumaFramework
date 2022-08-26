@@ -1,7 +1,7 @@
 import { isUndefined } from './utils'
 
 class EventEmitter {
-    listeners: any = []
+    private listeners: any = []
 
     constructor() {
         this.listeners = []
